@@ -183,6 +183,7 @@ module.exports = {
     },
     spacing: {
       px: '1px',
+      '2px': '2px',
       '0': '0',
       '1': '0.25rem',
       '2': '0.5rem',
@@ -204,6 +205,7 @@ module.exports = {
       '56': '14rem',
       '64': '16rem',
       '72': '18rem',
+      '80': '20rem',
       '84': '21rem',
       '96': '24rem',
     },
