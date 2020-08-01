@@ -1,7 +1,3 @@
-/* -----
-SVG Icons - svgicons.sparkk.fr
------ */
-
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
@@ -11,4 +7,33 @@ SVG Icons - svgicons.sparkk.fr
 .svg-icon circle {
   stroke: #4691f6;
   stroke-width: 1;
+}
+
+.fancy-scrollbar {
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0);
+}
+
+#board::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+}
+
+.fancy-scrollbar::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+#board::-webkit-scrollbar-button {
+  display: block;
+  height: 4px;
+  width: 4px;
+}
+
+#board::-webkit-scrollbar-track-piece {
+  background: rgba(0,0,0,.15);
+}
+
+.fancy-scrollbar::-webkit-scrollbar-track-piece {
+  background: rgba(9,30,66,.08);
 }

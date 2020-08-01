@@ -586,6 +586,9 @@ module.exports = {
       '6': '6',
       '7': '7',
     },
+    transform: {
+      'none': 'none',
+    },
     transformOrigin: {
       center: 'center',
       top: 'top',
@@ -608,6 +611,10 @@ module.exports = {
       '110': '1.1',
       '125': '1.25',
       '150': '1.5',
+      '-100': '-1',
+      'stretched-x': ['2', '0.5'],
+      'stretched-y': ['0.5', '2'],
+      '3d': ['0.5', '1', '2'],
     },
     rotate: {
       '-180': '-180deg',
@@ -617,6 +624,8 @@ module.exports = {
       '45': '45deg',
       '90': '90deg',
       '180': '180deg',
+      '270': '270deg',
+      '3d': ['0', '1', '0.5', '45deg']
     },
     translate: (theme, { negative }) => ({
       ...theme('spacing'),
@@ -624,16 +633,37 @@ module.exports = {
       '-full': '-100%',
       '-1/2': '-50%',
       '1/2': '50%',
-      full: '100%',
+      'full': '100%',
+      'right-up': ['100%', '-100%'],
+      '3d': ['40px', '-60px', '-130px'],
     }),
     skew: {
       '-12': '-12deg',
       '-6': '-6deg',
       '-3': '-3deg',
+      '-5': '-5deg',
       '0': '0',
       '3': '3deg',
+      '5': '5deg',
       '6': '6deg',
       '12': '12deg',
+    },
+    perspective: {
+      'none': 'none',
+      '250': '250px',
+      '500': '500px',
+      '750': '750px',
+      '1000': '1000px',
+    },
+    perspectiveOrigin: {
+      't': 'top',
+      'tr': 'top right',
+      'r': 'right',
+      'br': 'bottom right',
+      'b': 'bottom',
+      'bl': 'bottom left',
+      'l': 'left',
+      'tl': 'top left',
     },
     transitionProperty: {
       none: 'none',
@@ -713,6 +743,8 @@ module.exports = {
     outline: ['responsive', 'focus'],
     overflow: ['responsive'],
     padding: ['responsive'],
+    perspective: ['responsive'],
+    perspectiveOrigin: ['responsive'],
     placeholderColor: ['responsive', 'focus'],
     pointerEvents: ['responsive'],
     position: ['responsive'],
@@ -745,7 +777,10 @@ module.exports = {
     transformOrigin: ['responsive'],
     scale: ['responsive', 'hover', 'focus'],
     rotate: ['responsive', 'hover', 'focus'],
+    transformStyle: ['responsive'],
     translate: ['responsive', 'hover', 'focus'],
+    backfaceVisibility: ['responsive'],
+    transformBox: ['responsive'],
     skew: ['responsive', 'hover', 'focus'],
     transitionProperty: ['responsive'],
     transitionTimingFunction: ['responsive'],
@@ -753,6 +788,8 @@ module.exports = {
   },
   corePlugins: {},
   plugins: [
-
+    require('tailwindcss-transforms')({
+      '3d': false, // defaults to false
+    }),
   ],
 }
