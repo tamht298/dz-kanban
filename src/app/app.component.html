@@ -1,9 +1,9 @@
 <div class="h-screen flex">
-  <div class="bg-black opacity-50 lg:hidden fixed inset-0" [ngClass]="sidebarOpen?'block':'hidden'"
+  <div class="bg-black opacity-50 lg:hidden fixed inset-0 z-20" [ngClass]="sidebarOpen?'block':'hidden'"
   (click)="sidebarOpen=false"></div>
   <div
-    class="lg:static lg:translate-x-0 lg:inset-auto fixed z-30 inset-y-0 left-0 w-64 px-6 py-3 bg-gray-200 border-r overflow-auto transition duration-700 ease-in-out"
-    [ngClass]="sidebarOpen? 'fixed translate-x-0':'-translate-x-full duration-500'"
+    class="lg:static lg:translate-x-0 lg:inset-auto fixed z-30 inset-y-0 left-0 w-64 px-6 py-3 bg-gray-200 border-r overflow-auto transition duration-500 ease-in-out"
+    [ngClass]="sidebarOpen? 'fixed translate-x-0':'-translate-x-full duration-300'"
   >
     <div class="flex justify-between items-center">
       <span>
