@@ -2,8 +2,8 @@
   <div class="bg-black opacity-75 lg:hidden fixed inset-0 z-20" [ngClass]="sidebarOpen?'block':'hidden'"
   (click)="sidebarOpen=false"></div>
   <div
-    class="lg:static lg:translate-x-0 lg:inset-auto fixed z-30 inset-y-0 left-0 w-64 px-6 py-3 bg-gray-100 border-r overflow-auto transition duration-500 ease-in-out"
-    [ngClass]="sidebarOpen? 'fixed translate-x-0':'-translate-x-full duration-300'"
+    class="lg:static lg:translate-x-0 lg:inset-auto fixed z-30 inset-y-0 left-0 w-64 px-6 py-3 bg-gray-100 border-r overflow-auto transition duration-500"
+    [ngClass]="sidebarOpen? 'fixed translate-x-0 ease-out':'-translate-x-full ease-in-out'"
   >
     <div class="flex justify-between items-center">
       <span>
